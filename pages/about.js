@@ -1,14 +1,13 @@
 import Head from "next/head";
 import Nav from "../components/nav";
 import Footer from '../components/footer'
-
 import styles from "../styles/about.module.scss";
 
 const about = () => {
 	return (
 		<>
 			<Head>
-				<title>About / Contact - Active Invest</title>
+				<title>About Us - Active Invest</title>
 			</Head>
 			<Nav />
 			
