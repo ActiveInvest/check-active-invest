@@ -1,0 +1,67 @@
+$transduration: 275ms;
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-col {
+	@include flex-center;
+	flex-direction: column;
+}
+
+@mixin color-over($initial, $left, $right) {
+	position: relative;
+	display: inline-block;
+	font-size: 1.1em;
+	color: $initial;
+	overflow: hidden;
+	background: linear-gradient(to right, $left, $right 50%, $initial 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position $transduration ease;
+	text-decoration: none; // text decorations are clipped in WebKit browsers
+
+	&:hover {
+		background-position: 0 100%;
+	}
+}
+
+@mixin underline(
+	$color,
+	$height: 2px,
+	$width: 100%,
+	$distance: 1px,
+	$center: true,
+	$onhover: true
+) {
+	position: relative;
+
+	&::before {
+		content: "";
+		height: $height;
+		bottom: -$distance;
+		position: absolute;
+		background: $color;
+		transition: $transduration;
+		@if $center {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		@if $onhover {
+			width: 0%;
+		} @else {
+			width: 100%;
+		}
+	}
+
+	@if $onhover {
+		&:hover::before {
+			width: $width;
+		}
+	}
+}

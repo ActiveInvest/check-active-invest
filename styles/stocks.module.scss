@@ -1,0 +1,139 @@
+@import "colors.scss";
+
+.logo {
+	width: 5rem;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+	height: 100vh;
+	color: $secondary-dark;
+	font-family: monospace;
+	margin: 30px;
+
+	> *:not(nav) {
+		max-width: 960px;
+		width: 100%;
+		margin: auto;
+	}
+
+	> input {
+		margin-top: 8px;
+		margin-bottom: 32px;
+		font-family: "Comfortaa", cursive;
+		font-size: 2rem;
+		line-height: 1.2;
+		border: none;
+		outline: none;
+		padding: 12px 8px;
+		box-sizing: border-box;
+		border-bottom: solid 2px black;
+	}
+
+	> span {
+		width: 48px;
+		height: 48px;
+		position: fixed;
+		bottom: 10%;
+		right: 10%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100%;
+		opacity: 0.8;
+		transition: 0.2s;
+		cursor: pointer;
+		outline: none;
+		background: $white;
+		z-index: 1000;
+		box-shadow: -10px 10px 20px #c2c5c6, 10px -10px 20px #ffffff;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+		&:hover {
+			opacity: 1;
+			transform: scale(1.1);
+		}
+
+		&:active {
+			background: linear-gradient(225deg, #dbddde, #ffffff);
+		}
+	}
+}
+
+.stockList {
+	position: relative;
+	line-height: 1.2;
+	overflow-y: scroll;
+	border-radius: 9px;
+	height: 100%;
+	max-height: inherit;
+
+	&::-webkit-scrollbar {
+		width: 12px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $white;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 3px;
+		background-color: grayscale($color: $secondary-dark);
+	}
+}
+
+.stockListItem {
+	margin: 16px;
+	padding: 16px;
+	border-radius: 5px;
+	background: #eee;
+	color: #2e2e2e;
+	position: static;
+	content-visibility: auto;
+	contain-intrinsic-size: 1px 100px;
+
+	&,
+	& * {
+		transition: 275ms;
+	}
+
+	> h2 {
+		font-size: 1.2em;
+		padding: 8px 0;
+	}
+
+	> div {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 16px;
+		cursor: pointer;
+
+		> a:not([href]) {
+			cursor: default;
+		}
+
+		> a[href] {
+			color: $secondary-dark;
+
+			&:hover {
+				text-decoration-line: underline;
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.stockList > li {
+		flex-direction: column;
+
+		> div {
+			width: 100%;
+			text-align: right;
+		}
+	}
+
+	.wrapper > span {
+		right: 6%;
+	}
+}

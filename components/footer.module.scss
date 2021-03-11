@@ -1,0 +1,15 @@
+@import "../styles/colors.scss";
+
+.footer {
+    background: linear-gradient(to right,  $secondary, $primary);;
+    color: #fff;
+}
+
+.footerText{
+    text-align: center;
+    padding: 15px;
+}
+
+.heart{
+    color: red;
+}

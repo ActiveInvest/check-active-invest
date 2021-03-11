@@ -1,0 +1,40 @@
+div.container {
+    display: none;
+    box-shadow: 3px 3px 11px red;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    max-width: 25%;
+    z-index: 100;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 15px;
+    font-family: 'Jost', sans-serif;
+    color: #1F1F1F;
+    position: fixed;
+}
+
+
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        align-self: flex-start;
+        height: 15px;
+        margin-left: 10px;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+    div.container {
+        max-width: 60%;
+    }
+}

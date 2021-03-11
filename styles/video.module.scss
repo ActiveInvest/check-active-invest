@@ -1,0 +1,43 @@
+@import "../styles/colors.scss";
+
+// .mainDiv{
+//     min-height: 100vh;
+// }
+
+.container {
+    position: relative;
+    width: calc(100% - 100px);
+    overflow: hidden;
+    margin: 50px 50px;
+    padding-top: 56.25%;
+    border: 3px solid $primary;
+    min-height: 90vh;
+    box-shadow: 10px 10px 5px rgba($color: $secondary-dark, $alpha: 0.7);
+    border-radius: 15px;
+   
+    
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .container{
+        width: calc(100% - 50px);
+        margin: 25px 25px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .container{
+        width: calc(100% - 30px);
+        margin: 25px 15px;
+    }
+}

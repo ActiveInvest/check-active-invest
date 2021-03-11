@@ -1,0 +1,178 @@
+@import "../styles/colors.scss";
+
+div.container {
+    box-shadow: 3px 3px 11px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 290px;
+    max-width: 97%;
+    z-index: 100;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+
+    font-family: 'Jost', sans-serif;
+    color: #1F1F1F;
+    position: fixed;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img.logo {
+        height: 45px;
+    }
+
+    img.cross {
+        align-self: flex-start;
+        height: 15px;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+
+    span {
+        margin-left: 15px;
+    }
+}
+
+section.text {
+    margin: 10px 0px;
+    h1 {
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        // Bad code! Use scale();
+        color: lighten(#1F1F1F, 20%);
+    }
+}
+
+form.contactForm {
+
+    font-size: 1.125rem;
+
+    input[type = 'text' ] {
+        border: solid 1px #1F1F1F;
+        border-radius: 3px;
+        width: calc(100% - 15px);
+        height: 40px;
+        margin: 15px 0;
+        font-size: inherit;
+        padding-left: 10px;
+        font-family: inherit;
+    }
+
+    input[type = 'email' ] {
+        border: solid 1px #1F1F1F;
+        border-radius: 3px;
+        width: calc(100% - 15px);
+        height: 40px;
+        margin: 15px 0;
+        font-size: inherit;
+        padding-left: 10px;
+        font-family: inherit;
+    }
+
+    input[type = 'number' ] {
+        border: solid 1px #1F1F1F;
+        border-radius: 3px;
+        width: calc(100% - 15px);
+        height: 40px;
+        margin: 15px 0;
+        font-size: inherit;
+        padding-left: 10px;
+        font-family: inherit;
+    }
+    input[type = 'submit'] {
+        margin-top: 45px;
+        height: 40px;
+        width: 170px;
+        border: none;
+        background-color: $primary;
+        border-radius: 3px;
+        font-size: inherit;
+        font-family: inherit;
+
+        &:hover {
+            background-color: darken($primary, 3%);
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    div.container {
+        min-width: 75%;
+        padding: 30px;
+    }
+
+    section.text {
+        h1 {
+            font-size: 2.25rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    form.contactForm {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    div.container {
+        min-width: 85%;
+        padding: 25px;
+    }
+
+    section.text {
+        h1 {
+            font-size: 2.25rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    form.contactForm {
+        font-size: 1.25rem;
+    }
+}
+
+
+
+@media screen and (max-width: 560px) {
+    div.container {
+        min-width: 90%;
+        padding: 20px;
+    }
+
+    section.text {
+        h1 {
+            font-size: 2.25rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+        }
+    }
+
+    form.contactForm {
+        font-size: 1.25rem;
+    }
+}

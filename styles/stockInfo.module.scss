@@ -1,0 +1,86 @@
+.container {
+	margin: 2rem auto;
+	max-width: 960px;
+	width: 100%;
+	display: grid;
+	grid-row: auto auto auto;
+	grid-gap: 32px;
+}
+
+.bigTicker {
+	font-size: 5rem;
+}
+
+.form {
+	width: 100%;
+	display: grid;
+	grid-template-rows: 1fr 1fr 4fr;
+	grid-template-columns: auto auto;
+	gap: 15px;
+	align-content: center;
+	border: solid 1px #E0E3EB;
+	border-radius: 5px;
+	padding: 50px;
+
+	> div > input,
+	> div > select,
+	> button {
+		width: 100%;
+		outline: none;
+	}
+
+	input, select {
+		max-height: 30px;
+	}
+
+	> span.button {
+		max-width: 240px;
+		font-size: 1.2em;
+		padding: 8px 16px;
+		margin: auto;
+		display: block;
+		border: solid 1px gray;
+		outline: none;
+		text-align: center;
+		cursor: pointer;
+		border-radius: 4px;
+		grid-column: span 2;
+	}
+
+	> span.button:hover {
+		box-shadow: 0px 3px 10px #a9a9a9;
+	}
+
+	> span.button:active {
+		box-shadow: inset 0px 3px 10px #a9a9a9;
+	}
+}
+
+.subContainer {
+	min-width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.topRow {
+	width: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+	.subContainer {
+		display: initial;
+	}
+
+	.topRow {
+		width: 100%;
+	}
+
+	.form {
+		padding: 10px;
+	}
+}
+
+
+.technical_widget {
+	margin: 0 auto;
+}
