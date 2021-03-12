@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Nav from "../components/nav";
+import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/video.module.scss';
 
@@ -9,7 +9,7 @@ export default function Video() {
         <Head>
             <title>Investing - Active Invest</title>
         </Head>
-        <Nav />
+        <Navbar />
         <div className={styles.mainDiv}>
         <div className = {styles.container}>
             <iframe

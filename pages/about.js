@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Nav from "../components/nav";
+import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from "../styles/about.module.scss";
 
@@ -9,7 +9,7 @@ const about = () => {
 			<Head>
 				<title>About Us - Active Invest</title>
 			</Head>
-			<Nav />
+			<Navbar />
 			
 			<div className={styles.container}>
 				<main className={styles.main}>

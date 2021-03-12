@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import Head from "next/head";
 import Footer from '../components/footer'
-import Nav from "../components/nav";
+import Navbar from '../components/navbar'
 import contactStyles from '../styles/contact.module.scss'
 
 const contact = () => {
@@ -60,7 +60,7 @@ const contact = () => {
             <Head>
 				<title>Contact Us - Active Invest</title>
 			</Head>
-            <Nav />
+            <Navbar />
             <main className={contactStyles.mainHead}>
             <div>
                 <div className={contactStyles.mainTitle}>

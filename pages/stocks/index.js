@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import classes from "../../styles/index.module.scss";
 import stocksClasses from "../../styles/stocks.module.scss";
-import Nav from '../../components/nav'
+import Navbar from '../../components/navbar'
 import Footer from '../../components/footer'
 
 const Stock = ({ Name, BSE, NSE }) => {
@@ -74,15 +74,8 @@ export default function Stocks({ stocks }) {
 			<Head>
 				<title>Halal Stocks - Active Invest</title>
 			</Head>
-			<Nav />
+			<Navbar />
 			<div className={stocksClasses.wrapper}>
-				{/* <nav className={classes.topNav}>
-					<Link href="/">
-						<a href="/">
-							<img className={stocksClasses.logo} src="/images/logo.svg" />
-						</a>
-					</Link>
-				</nav> */}
 				
 				<input placeholder="Search 1300+ Halal Stocks" onChange={handleSearch} />
 				<ul ref={stockListRef} className={stocksClasses.stockList} onScroll={handleScroll}>

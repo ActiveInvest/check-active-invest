@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import Nav from "../components/nav";
+import Navbar from '../components/navbar'
 import Form from "../components/form";
 import Footer from '../components/footer'
 
@@ -26,7 +26,7 @@ export default function Home() {
 				<title>Active Invest - Halal Investing Made Easy</title>
 			</Head>
 			<Form />
-			<Nav />
+			<Navbar />
 			<div className={styles.intro} id = 'blur'>
 				<div>
 					<h1 className={styles.heading}>Halal Investing</h1>
@@ -49,9 +49,9 @@ export default function Home() {
 						</Link>
 					</div>
 				</div>
-				<span>
+				{/* <span>
 					<FontAwesomeIcon
-						size="4x"
+						size="1x"
 						icon={faAngleDown}
 						color="#1b1f1f"
 						onClick={() =>
@@ -62,7 +62,7 @@ export default function Home() {
 							})
 						}
 					/>
-				</span>
+				</span> */}
 			</div>
 
 			<main className={styles.main}>

@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import Head from "next/head";
-import Nav from "../../components/nav";
+import Navbar from "../../components/navbar";
 import Footer from '../../components/footer'
 import styles from "../../styles/stockInfo.module.scss";
 
@@ -164,7 +164,7 @@ export default function stockInfo({ data: { symbol, name } }) {
 			<Head>
 				<title>Stock Info - {ticker}</title>
 			</Head>
-			<Nav />
+			<Navbar />
 			<div id="main" className={styles.container}>
 				<div id="overview_widget" ref={overviewContainer} />
 				<div id="tradingview_735f8" ref={graphContainer} />
