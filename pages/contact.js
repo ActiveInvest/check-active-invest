@@ -28,7 +28,22 @@ const contact = () => {
     const handleSubmit = (e)=>{
         e.preventDefault()
 
-        alert(`${ formData.fullName} , ${formData.email} , ${formData.phone} , ${formData.message}`)
+        axios.post('/api/contact-form-data', formData)
+        .then(response => {
+            if (response.status === 200) {
+                document.querySelector('#message').style.display = 'block';
+                document.querySelector('#message').innerHTML = `${response.data.message}`;
+                setTimeout( ()=>{ document.querySelector('#message').style.display = 'none'; }, 3000);
+            } else{
+                document.querySelector('#message').style.display = 'block';
+                document.querySelector('#message').innerHTML = `${response.data.message}`;
+                setTimeout( ()=>{ document.querySelector('#message').style.display = 'none'; }, 3000);
+            }
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+
 
         setFormData({
             fullName:'',
@@ -57,6 +72,7 @@ const contact = () => {
 
             <div className = {contactStyles.container}>
                 <p className={contactStyles.para}>We’d love to discuss how we can help you.</p>
+                <p id='message' className={contactStyles.para2}></p>
                 <form
                 onSubmit={handleSubmit} 
                 className = {contactStyles.contactForm}
