@@ -5,11 +5,11 @@ const footer = () => {
     return (
         <>
         <div className={footerStyles.footer}>
-            <p className={footerStyles.footerText}>  Designed with <span className={footerStyles.heart}> ♥ </span>at<Link href='/'> ACTIVE INVEST </Link>, &copy; 2021 All Rights Reserved</p>
+            <p className={footerStyles.footerText}>  Made with <span className={footerStyles.heart}> ♥ </span>at<Link href='/'> Active Invest </Link>, &copy; 2021 All Rights Reserved</p>
         </div>
             
         </>
     ) 
 }
 
-export default footer
+export default footer;

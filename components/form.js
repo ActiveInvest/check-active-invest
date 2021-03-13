@@ -116,7 +116,7 @@ export default function Form() {
                     value={userData.phone}
                 />
 
-                <input type = 'submit' value = 'Continue' />
+                <input type = 'submit' value = 'Continue'/>
             </form>
         </div>
 
