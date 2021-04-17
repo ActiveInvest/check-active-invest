@@ -21,7 +21,7 @@ const about = () => {
 						<div className={styles.card}>
 							<img src="/images/Zaman.png" />
 							<h3>Abdullah Zaman</h3>
-							<h6>Cheif Executive Officer</h6>
+							<h6>Chief Executive Officer</h6>
 							<a
 								href="https://www.linkedin.com/in/abdullah-zaman-a87860144/"
 								target="_blank"
